@@ -97,7 +97,7 @@ int main()
    double d,w;
    cout<<"Enter the Deposit Amount:"<<endl;
    cin>>d;
-   .deposit();
+   s1.deposit();
    cout<<"Enter the Withdraw Amount:"<<endl;
    cin>>w;
    s1.withdraw();
