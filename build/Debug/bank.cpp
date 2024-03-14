@@ -7,32 +7,27 @@ class Account
      string acc_no;
      double balance;
  public:
-     double deposit;
-     double withdraw;
+     Account(string a,double b): acc_no(a),balance(b){}  
 
-     void set(string a,double b,double d,double w)
+     void deposit(double d)
      {
-        acc_no=a;
-        balance=b;
-        deposit=d;
-        withdraw=w;
-     }   
-     int deposit()
-     {
-        double Total_Amount = balance + deposit;
-        return Total_Amount;
-        cout<<"Total Amount:"<<Total_Amount<<endl;
+      balance += d;
      }
-     int withdraw()
+     void withdraw(double w)
      {
-        double Total_Amount = balance - withdraw; 
-        return Total_Amount;    
-        cout<<"Total Amount:"<<Total_Amount<<endl;   
+      if(balance>= w)
+      {
+         balance -= w;
+      }
+      else
+      {
+         cout<<"\nInsufficient balance!!!"<<endl;
+      }
      }
      void display()
      {
-      cout<<"Account Number"<<acc_no<<endl;
-      cout<<"Total Balance:"<<balance<<endl;
+      cout<<"\nAccount Number"<<acc_no<<endl;
+      cout<<"\nTotal Balance:"<<balance<<endl;
      }
 };
 
@@ -41,15 +36,11 @@ class Savingsacc:public Account
     private:
        double ir;
     public:
-       void irate(double i)
+       Savingsacc(string a,double b,double i):Account(a,b), ir(i) {}
+       
+       void add_ir()
        {
-         ir=i;
-       }
-       int add_ir()
-       {
-        double Total_Amount = balance + ((ir*balance)/100);
-        return Total_Amount;
-        cout<<"Total Amount:"<<Total_Amount<<endl;
+        balance += balance * ir;
        }
 };
 
@@ -58,57 +49,42 @@ class Checkacc:public Account
    private:
       double servchrg;
    public:
-      void charge(double s)
+      Checkacc(string a,double b,double s):Account(a,b),servchrg(s) {}
+      void servicecharge()
       {
-         servchrg=s;
-      }
-      int servicecharge()
-      {
-         double Total_Amount = balance - servchrg;
-         return Total_Amount;
-         cout<<"Total Amount:"<<Total_Amount<<endl;
+         balance -= servchrg;
       }
 };
 
 class Business:public Account
 {
    private:
-      char business_name;
+      string business_name;
    public:
+      Business(string a,double b,string bs):Account(a,b),business_name(bs) {}
       void display()
       {
-         cout<<"Business Name : Roy Solutions"<<endl;
+         Account::display();
+         cout<<"\nBusiness Name :"<<business_name<<endl;
       }
 };
 
 int main()
 {
-   Savingsacc s1;
-   Checkacc c1;
-   Business b1;
+  Savingsacc saving("HSX54553",150000,0.5);
+  Checkacc check("HSX67867",100000,0);
+  Business busi("HSX47589",120000,"Roy Solutions");
 
-   b1.display();
-  
-   string a;
-   double b;
-   cout<<"Enter Account No. and Balance:"<<endl;
-   cin>>a>>b;
-   s1.display();
-   double d,w;
-   cout<<"Enter the Deposit Amount:"<<endl;
-   cin>>d;
-   s1.deposit();
-   cout<<"Enter the Withdraw Amount:"<<endl;
-   cin>>w;
-   s1.withdraw();
-   double ir;
-   cout<<"Enter the Interest Rate:"<<endl;
-   cin>>ir;
-   s1.add_ir();
-   double s;
-   cout<<"Enter the Service Charges:"<<endl;
-   cin>>s;
-   c1.servicecharge();
-   return 0;
+  saving.deposit(50000);
+  saving.add_ir();
+  saving.display();
 
+  check.withdraw(500000);
+  check.servicecharge();
+  check.display();
+
+  busi.deposit(100000);
+  busi.display();
+
+  return 0;
 }
