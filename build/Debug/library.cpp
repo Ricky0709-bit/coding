@@ -31,8 +31,8 @@ class Employee:public Library
       }
       void emp_d() 
      {
-     cout<<"Name:"<<name;
-     cout<<"Age:"<<age;
+     cout<<"\nName:"<<name;
+     cout<<"\nAge:"<<age;
      cout << "\nEmployee ID: " << emp_id << endl;
      cout << "\nDesignation: " << designation << endl;
      }
