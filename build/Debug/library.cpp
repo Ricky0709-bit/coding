@@ -64,9 +64,8 @@ class Book:public Employee,public Student
 {
     public:
         string title;
-        bool availabiltiy;
-         int book_id;
-         int user_id;
+        string book_id;
+        int user_id;
         
 
     void manage_book(int op)
@@ -76,7 +75,7 @@ class Book:public Employee,public Student
         
         cout << "\nEnter user ID: ";
         cin >> user_id;
-         cout<<"\nTitle:"<<endl;
+        cout<<"\nTitle:"<<endl;
         cin>>title;
         cout << "\nEnter book ID: ";
         cin >> book_id;
