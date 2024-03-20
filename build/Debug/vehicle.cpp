@@ -105,7 +105,6 @@ class Audi:public Car
        {
         cout<<"\nEnter Model Type of Audi : ";
         cin>>modeltype;
-        
        }
        void  showcar()
        {
@@ -175,7 +174,7 @@ class TVS:public  Bike
         cout<<"No. of  Gears:"<<nogear<<endl;
         cout<<"Cooling Type:"<<cooltype<<endl;
         cout<<"Wheel Type:"<<wheeltype<<endl;
-        cout<<"Fuel Tank Size:"<<ftanksize<<" Ltrs"<<endl;
+        cout<<"Fuel Tank Size:"<<ftanksize<<" Inches"<<endl;
        }
 };
 
@@ -203,7 +202,7 @@ class Bajaj:public Bike
         cout<<"No. of  Gears:"<<nogear<<endl;
         cout<<"Cooling Type:"<<cooltype<<endl;
         cout<<"Wheel Type:"<<wheeltype<<endl;
-        cout<<"Fuel Tank Size:"<<ftanksize<<" Ltrs"<<endl;
+        cout<<"Fuel Tank Size:"<<ftanksize<<" Inches"<<endl;
        }    
 };
 
