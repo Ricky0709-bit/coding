@@ -1,0 +1,14 @@
+ ------------------------------------------------------
+ |   	 MODEL          |   Seats  |   Price(per KM)  |
+ ------------------------------------------------------
+ |      1.Auto          |     3    |       Rs.8       |
+ |   2.SUZUKI WAGON_R   |     4    |      Rs.12.5     |
+ |   3.SUZUKI D-ZIRE    |     4    |       Rs.15      |
+ |   4.TATA ALTROZ      |     4    |       Rs.17      |
+ |   5.Hyundai CRETA    |     5    |       Rs.20      |
+ |   6.Hyundai Alcazar  |     5    |      Rs.21.5     |
+ |   7.SUZUKI BREZZA    |     5    |       Rs.23      |
+ |   8.SUZUKI ERTIGA    |     6    |       Rs.25      |  
+ |   9.TOYOTA INNOVA    |     6    |      Rs.26.5     |
+ |   10.TATA Safari     |     6    |       Rs.27      |   
+ ------------------------------------------------------

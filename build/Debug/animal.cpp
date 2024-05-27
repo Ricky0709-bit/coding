@@ -1,46 +1,54 @@
 #include <iostream>
+
 using namespace std;
 
-
+// Base class
 class Animal {
 public:
-    
-    virtual void sound() = 0;
-};
-
-
-class Dog : public Animal 
-{
-public:
-    
-    void sound()
-    {
-        cout << "Dog barks: Woof! Woof!" << endl;
+    virtual void makeSound() {
+        cout << "Animal makes a sound" << endl;
     }
 };
 
-
-class Cat : public Animal 
-{
+// Derived class Dog
+class Dog : public Animal {
 public:
-    
-    void sound()
-   {
-        cout << "Cat meows: Meow! Meow!" << endl;
+    void makeSound() {
+        cout << "Dog barks" << endl;
+    }
+};
+
+// Derived class Cat
+class Cat : public Animal {
+public:
+    void makeSound() {
+        cout << "Cat meows" << endl;
+    }
+};
+
+// Derived class Cow
+class Cow : public Animal {
+public:
+    void makeSound() {
+        cout << "Cow moos" << endl;
     }
 };
 
 int main() {
-    
+    Animal* animalPtr;
     Dog dog;
     Cat cat;
+    Cow cow;
 
-    
-    cout << "Sound of Dog: ";
-    dog.sound();
+    // Using base class pointer to refer to derived class objects
+    animalPtr = &dog;
+    animalPtr->makeSound();  // Output: Dog barks
 
-    cout << "Sound of Cat: ";
-    cat.sound();
+    animalPtr = &cat;
+    animalPtr->makeSound();  // Output: Cat meows
+
+    animalPtr = &cow;
+    animalPtr->makeSound();  // Output: Cow moos
 
     return 0;
 }

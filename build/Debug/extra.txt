@@ -1,0 +1,137 @@
+User
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+class temp{
+    string userName,Email,password;
+    string searchName,searchPass,searchEmail;
+    fstream file;
+    public:
+    void login();
+    void signUP();
+    void forgot();
+}obj;
+
+int main()
+{
+    char choice;
+    do
+    {
+    cout<<"\n\t\t---------------------------------WELCOME To RidesGo...---------------------------------\t\t\n"<<endl;
+    cout<<"\n1- Login"<<endl;
+    cout<<"\n2- Sign-Up"<<endl;
+    cout<<"\n3- Forgot Password?"<<endl;
+    cout<<"\n4- Exit"<<endl;
+    cout<<"\nEnter Your Choice : "<<endl;
+    cin>>choice;
+
+    switch(choice){
+        case '1':
+            cin.ignore();
+            obj.login();
+        break;
+        case '2':
+            cin.ignore();
+            obj.signUP();
+        break;
+        case '3':
+            cin.ignore();
+            obj.forgot();
+        break;
+        case '4':
+           cout<<"Signed Out...!"<<endl;
+           exit(4);
+           break;
+        default:
+        {
+         cout<<"Invalid Choice...! Try Again."<<endl;
+         break;
+   }
+  }
+ } while (choice!='4');
+}
+void temp :: signUP()
+{
+    cout<<"\nEnter Your User Name : "<<endl;
+    getline(cin,userName);
+    cout<<"Enter Your Email Address : "<<endl;
+    getline(cin,Email);
+    cout<<"Enter Your Password : "<<endl;
+    getline(cin,password);
+
+    file.open("loginData.txt",ios :: out | ios :: app);
+    file<<userName<<"*"<<Email<<"*"<<password<<endl;
+    cout<<"\n Signed Up Successfully...!!!"<<endl;
+    file.close();
+}
+void temp :: login()
+{
+ 
+    cout<<"\n\t-------------------------------------LOGIN------------------------------------\t\n"<<endl;
+    cout<<"Enter Your User Name : "<<endl;
+    getline(cin,searchName);
+    cout<<"Enter Your Password : "<<endl;
+    getline(cin,searchPass);
+
+    file.open("loginData.txt",ios :: in);
+    getline(file,userName,'*');
+    getline(file,Email,'*');
+    getline(file,password,'\n');
+    while(!file.eof()){
+        if(userName == searchName)
+        {
+            if(password == searchPass)
+            {
+                system("CLS");
+                cout<<"\n LOGIN Successful...!!!\n";
+                cout<<"\nUsername : "<<userName<<endl;
+                cout<<"\nEmail : "<<Email<<endl;
+            }
+            else
+            {
+                cout<<"\nLOGIN ERROR \nPlease check your username and password.\n";
+            }
+        }
+    getline(file,userName,'*');
+    getline(file,Email,'*');
+    getline(file,password,'\n');
+    }
+    file.close();
+}
+void temp :: forgot()
+{
+    cout<<"\nEnter Your UserName : "<<endl;
+    getline(cin,searchName);
+    cout<<"\nEnter Your Email Address : "<<endl;
+    getline(cin,searchEmail);
+
+    file.open("loginData.txt",ios :: in);
+    getline(file,userName,'*');
+    getline(file,Email,'*');
+    getline(file,password,'\n');
+    while(!file.eof()){
+        if(userName == searchName)
+        {
+            if(Email == searchEmail)
+            {
+                cout<<"\nAccount Found...!"<<endl;
+                cout<<"\nYour Password : "<<password<<endl;
+            }
+            else
+            {
+                system("CLS");
+                cout<<"Error! 404 Not found...!\n";
+            }
+        }
+        else
+        {
+            system("CLS");
+            cout<<"\nError! 404 Not found...!\n";
+        }
+    getline(file,userName,'*');
+    getline(file,Email,'*');
+    getline(file,password,'\n');
+    }
+    file.close();
+}
