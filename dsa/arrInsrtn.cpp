@@ -59,7 +59,7 @@ void insertelemnt(int arr[], int n, int x, int pos)
 
 int main()
 {
- int arr[15] = {5,9,3,7,2,4};
+ int arr[15] = {1,3,5,7,9,10};
  int n=6;
 
  cout<<"\n Before Insertion: ";
@@ -67,7 +67,7 @@ int main()
    cout<<arr[i]<<" ";
    cout<<endl;
 
- int x = 8, pos = 3;
+ int x = 8, pos = 6;
  insertelemnt(arr, n , x , pos);
  n++;
 
