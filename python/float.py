@@ -1,7 +1,8 @@
-floats = []
+list = []
+n = int(input("Enter elements of list:"))
 
-for i in range(5):
-     value = input(f"Enter value {i+1}:")
-     floats.append(value)
+for i in range(0,n):
+     val = int(input())
+     list.append(val)
      
-print("List of inputs:",floats)
+print(list)

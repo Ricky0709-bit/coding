@@ -1,3 +1,7 @@
-n= float(input("enter a no:"))
-# print("%.2f" % n) 
-print("Round_off:",format(n,".2f"))
+a="hi"
+def clgnm():
+    print("Students:"+a)
+    a="Python"
+    
+    clgnm()
+    print(a)
