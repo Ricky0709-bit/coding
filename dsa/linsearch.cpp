@@ -3,7 +3,7 @@ using namespace std;
 
 
 //Non recursive
-/*int findelement(int arr[], int n, int key)
+int findelement(int arr[], int n, int key)
 {
     int i;
     for(i=0;i<n;i++)
@@ -11,10 +11,10 @@ using namespace std;
       return i;
 
     return -1;
-}*/
+}
 
 //Recursive
-int findelement(int arr[], int n, int key)
+/*int findelement(int arr[], int n, int key)
 {
     if (n == 0) {
         return -1;
@@ -24,7 +24,7 @@ int findelement(int arr[], int n, int key)
         return n - 1;
     }
     return findelement(arr, n - 1, key);
-}
+}*/
 
 
 
