@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int r, c;
-    cout << "Enter the number of rows and columns:" << endl;
+    cout << "Enter the number of rows and columns:";
     cin >> r >> c;
 
     int x[r][c], y[r][c], result[r][c];
@@ -15,7 +15,7 @@ int main()
     {
         for (int j = 0; j < c; j++)
         {
-            cout << "Enter the element at position [" << i << "][" << j << "] of matrix x" << endl;
+            cout << "Enter the element at position [" << i << "][" << j << "] of matrix x: ";
             cin >> x[i][j];
         }
     }
@@ -24,7 +24,7 @@ int main()
     {
         for (int j = 0; j < c; j++)
         {
-            cout << "Enter the element at position [" << i << "][" << j << "] of matrix y" << endl;
+            cout << "Enter the element at position [" << i << "][" << j << "] of matrix y: ";
             cin >> y[i][j];
         }
     }
