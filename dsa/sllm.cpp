@@ -24,7 +24,7 @@ int main()
 
     do 
     {
-        cout << "\n************ CLL OPERATIONS *************";
+        cout << "\n************ SLL OPERATIONS *************";
         cout << "\n1. Create\n2. Print\n3. Count\n4. Search";
         cout << "\n5. Insert at Begin\n6. Insert at Middle\n7. Insert at End";
         cout << "\n8. Delete from Begin\n9. Delete from Middle\n10. Delete from End\n11. Exit";
@@ -85,7 +85,7 @@ Node* create(int n)
     cin >> x;
     head = new Node;
     head->data = x;
-    head->next = head;
+    head->next = NULL;
     p = head;
 
     for(int i = 2; i <= n; i++) 
@@ -95,7 +95,7 @@ Node* create(int n)
         p->next = new Node;
         p = p->next;
         p->data = x;
-        p->next = head;
+        p->next = NULL;
     }
 
     cout << "\nLinked list created successfully!";
@@ -111,13 +111,13 @@ void print(Node *head)
     }
 
     Node *p = head;
-    cout << "\nCLL Nodes: ";
-    do 
+    cout << "\nSLL Nodes: ";
+    while(p != NULL) 
     {
         cout << p->data << " -> ";
         p = p->next;
-    } while(p != head);
-    cout << head->data; 
+    }
+    cout << "NULL";
 }
 
 void count(Node *head) 
@@ -130,11 +130,11 @@ void count(Node *head)
 
     int count = 0;
     Node *p = head;
-    do 
+    while(p != NULL) 
     {
         count++;
         p = p->next;
-    } while(p != head);
+    }
 
     cout << "\nNumber of nodes: " << count;
 }
@@ -152,7 +152,7 @@ void search(Node *head)
     cin >> key;
 
     Node *p = head;
-    do 
+    while(p != NULL) 
     {
         if(key == p->data) 
         {
@@ -160,7 +160,7 @@ void search(Node *head)
             break;
         }
         p = p->next;
-    } while(p != head);
+    }
 
     if(flag == 1) 
     {
@@ -172,32 +172,13 @@ void search(Node *head)
     }
 }
 
-Node* insert_at_Begin(Node *head) {
-
-    Node *q, *p;
-    int x;
+Node* insert_at_Begin(Node *head) 
+{
+    Node *q = new Node;
     cout << "\nEnter data: ";
-    cin >> x;
-
-    q = new Node;
-    q->data = x;
-    q->next = q;
-
-    if(head == NULL) 
-    {
-        head = q;
-    } 
-    else 
-    {
-        p = head;
-        while(p->next != head) 
-        {
-            p = p->next;
-        }
-        p->next = q;
-        q->next = head;
-        head = q;
-    }
+    cin >> q->data;
+    q->next = head;
+    head = q;
 
     cout << "\nNode inserted at Begin successfully!";
     return head;
@@ -205,14 +186,10 @@ Node* insert_at_Begin(Node *head) {
 
 Node* insert_at_End(Node *head) 
 {
-    Node *q, *p;
-    int x;
+    Node *q = new Node;
     cout << "\nEnter data: ";
-    cin >> x;
-
-    q = new Node;
-    q->data = x;
-    q->next = q;
+    cin >> q->data;
+    q->next = NULL;
 
     if(head == NULL) 
     {
@@ -220,13 +197,12 @@ Node* insert_at_End(Node *head)
     } 
     else 
     {
-        p = head;
-        while(p->next != head) 
+        Node *p = head;
+        while(p->next != NULL) 
         {
             p = p->next;
         }
         p->next = q;
-        q->next = head;
     }
 
     cout << "\nNode inserted at End successfully!";
@@ -235,56 +211,46 @@ Node* insert_at_End(Node *head)
 
 Node* insert_at_Middle(Node *head) 
 {
-    Node *q, *p;
-    int x, loc, i;
+    Node *q = new Node;
+    int loc, i;
     cout << "\nEnter data: ";
-    cin >> x;
-
-    q = new Node;
-    q->data = x;
-    q->next = q;
+    cin >> q->data;
 
     if(head == NULL) 
     {
         head = q;
-        cout << "\nNode inserted in CLL as the first node because list was empty";
+        q->next = NULL;
+        cout << "\nNode inserted as the first node because list was empty";
     } 
     else 
     {
         cout << "\nEnter location for insertion: ";
         cin >> loc;
 
-        p = head;
-        for(i = 1; i < loc-1; i++) 
+        Node *p = head;
+        for(i = 1; i < loc-1 && p != NULL; i++) 
         {
             p = p->next;
         }
+
         q->next = p->next;
         p->next = q;
-
         cout << "\nNode inserted at middle successfully!";
     }
 
     return head;
 }
 
-Node* delete_at_Begin(Node *head)
- {
+Node* delete_at_Begin(Node *head) 
+{
     if(head == NULL) 
     {
         cout << "\nLinked list is already Empty! Cannot delete node!";
         return NULL;
     }
 
-    Node *q, *p = head;
-    while(p->next != head) 
-    {
-        p = p->next;
-    }
-
-    q = head;
+    Node *q = head;
     head = head->next;
-    p->next = head;
     delete q;
 
     cout << "\nNode deleted from Begin successfully!";
@@ -299,16 +265,19 @@ Node* delete_at_End(Node *head)
         return NULL;
     }
 
-    Node *q, *p = head;
-    while(p->next->next != head) 
+    Node *q = head, *p = NULL;
+    while(q->next != NULL) 
     {
-        p = p->next;
+        p = q;
+        q = q->next;
     }
 
-    q = p->next;
-    p->next = head;
-    delete q;
+    if(p != NULL)
+        p->next = NULL;
+    else
+        head = NULL;
 
+    delete q;
     cout << "\nNode deleted from End successfully!";
     return head;
 }
@@ -321,12 +290,12 @@ Node* delete_at_Middle(Node *head)
         return NULL;
     }
 
-    Node *q, *p = head;
     int loc, i;
     cout << "\nEnter location of node for deletion: ";
     cin >> loc;
 
-    for(i = 1; i < loc-1; i++) 
+    Node *p = head, *q;
+    for(i = 1; i < loc-1 && p->next != NULL; i++) 
     {
         p = p->next;
     }
