@@ -2,7 +2,7 @@
 using namespace std;
 
 //Non recursive
-int binsearch(int arr[], int low, int high, int key)
+/*int binsearch(int arr[], int low, int high, int key)
 {
  if(high < low)
     return -1;
@@ -12,10 +12,10 @@ int binsearch(int arr[], int low, int high, int key)
  if(key>arr[mid])
    return binsearch(arr, (mid +1), high, key);
  return binsearch(arr, low, (mid - 1), key);
-}
+}*/
 
 //Recursive
-/*int binsearch(int arr[], int low, int high, int key)
+int binsearch(int arr[], int low, int high, int key)
 {
     if (high >= low) 
     {
@@ -30,7 +30,7 @@ int binsearch(int arr[], int low, int high, int key)
         return binsearch(arr, mid + 1, high, key);
     }
   return -1;
-}*/
+}
 
 int main()
 {

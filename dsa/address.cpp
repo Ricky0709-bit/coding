@@ -13,8 +13,10 @@ int main() {
     int arr[rows][cols];
 
     cout << "Enter the elements of the array:\n";
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++) 
+        {
             cin >> arr[i][j];
         }
     }

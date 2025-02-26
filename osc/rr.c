@@ -11,7 +11,8 @@ struct Process {
 };
 
 
-void calculateTimes(struct Process processes[], int n, int quantum) {
+void calculateTimes(struct Process processes[], int n, int quantum) 
+{
     int time = 0;           
     int completed = 0;      
     int i = 0;             
