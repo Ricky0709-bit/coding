@@ -6,7 +6,6 @@ import threading
 import webbrowser
 import wikipedia
 import requests
-from bs4 import BeautifulSoup
 from queue import Queue
 
 tasks = {}
@@ -45,7 +44,6 @@ def get_greet():
         return "Good evening! How may I assist you?"
 
 def clear_screen():
-    """Clears the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_tnw(city):
@@ -64,7 +62,7 @@ def get_tnw(city):
 city = "Pune" 
 date,current_time, weather = get_tnw(city)
 print(f"Date: {date}")
-print(f"Current Time: {time}")
+print(f"Current Time: {current_time}")
 print(f"Weather in {city}: {weather}")
 
 def open_web(name):
@@ -86,7 +84,7 @@ def calculate(expression):
 
 def search_info(query):
     try:
-        summary = wikipedia.summary(query, sentences=200)
+        summary = wikipedia.summary(query, sentences=100)
         history.append(f"Searched: {query}")
         return summary
     except Exception:
@@ -172,15 +170,16 @@ def track_expenses(amount, description):
 def show_expense_history():
     if not expenses:
         return "No expenses recorded yet."
+    total = sum(expense['amount'] for expense in expenses)  
     history = "\n".join([f"{idx + 1}. {e['description']}: Rs.{e['amount']:.2f}" for idx, e in enumerate(expenses)])
-    return f"Expense History:\n{history}"
+    return f"Expense History:\n{history}\n\nTotal Expense: Rs.{total:.2f}"
 
 def play_media(media_type, media_name):
     media_files = {
         "music": {
             "1": "C:\\Music\\song1.mp3",
             "2": "C:\\Music\\song2.mp3",
-            "33": "C:\\Music\\song3.mp3"
+            "3": "C:\\Music\\song3.mp3"
         },
         "video": {
             "1": "C:\\Videos\\interview.mp4",

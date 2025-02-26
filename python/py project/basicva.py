@@ -44,7 +44,6 @@ def get_greet():
         return "Good evening! How may I assist you?"
 
 def clear_screen():
-    """Clears the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_tnw(city):

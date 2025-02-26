@@ -38,3 +38,8 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
