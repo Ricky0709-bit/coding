@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="bookinfo.xsd">
+    <title>XML Development</title>
+    <author>John Doe</author>
+    <isbn>978-123456789</isbn>
+    <publisher>TechBooks</publisher>
+    <edition>2nd</edition>
+    <price>29.99</price>
+</book>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Web Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 50%;
+        }
+        #calendar {
+            width: 100%;
+            font-size: 14px;
+            margin: auto;
+        }
+        #bmiResult {
+            font-size: 20px;
+        }
+        select, input {
+            padding: 8px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Web Application</h1>
+    
+    <h2>Change Background Color</h2>
+    <button id="changeBgBtn">Change Background</button>
+    
+    <div class="container">
+        <div class="card" id="bmiContainer">
+            <h2>BMI Calculator</h2>
+            <input type="number" id="height" placeholder="Height (cm)">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <div id="bmiResult"></div>
+        </div>
+        
+        <div class="card" id="calendarContainer">
+            <h2>Calendar Generator</h2>
+            <select id="month"></select>
+            <select id="year"></select>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #63637329;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        input {
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Conditional Statements</h2>
+    
+    <h3>If-Else Statement</h3>
+    <label>Enter a number:</label>
+    <input type="number" id="ifElseInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="ifElseOutput"></p>
+    
+    <h3>Grade Evaluation</h3>
+    <label>Enter marks:</label>
+    <input type="number" id="marksInput">
+    <button onclick="checkGrade()">Check</button>
+    <p id="gradeOutput"></p>
+
+    <h3>Switch Statement</h3>
+    <label>Enter a day number (1-7):</label>
+    <input type="number" id="switchInput">
+    <button onclick="checkDay()">Check</button>
+    <p id="switchOutput"></p>
+
+
+    <script src="cond.js"></script>
+</body>
+</html>
