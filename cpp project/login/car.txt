@@ -1,0 +1,35 @@
+------------------------------------------------------------------------------------------------------------------
+|             Car Name            |         Color           | Engine |  Mileage  | Body Type | Fuel Type| Price  |
+------------------------------------------------------------------------------------------------------------------
+| 1.SUZUKI Swift                  | Solid_Fire_Red	    | 1197 cc| 22.38 kmpl| Hatchback |  Petrol  | 12000  |
+| 2.SUZUKIBrezza                  | Sizzling_Red            | 1462 cc| 25.51 kmpl|    SUV    |   CNG    | 17500  |
+| 3.SUZUKi GRAND VITARA		  | Grandeur_Grey 	    | 1490 cc| 27.97 kmpl|    SUV    |  Hybrid  | 22500  |
+| 4.TATA NEXON			  | Fearless_Purple	    | 1200 cc| 24.08 kmpl|    SUV    |  Diesel  | 15000  |
+| 5.Hyundai CRETA		  | Abyss_Black        	    | 1497 cc| 21.80 kmpl|    SUV    |  Petrol  | 20000  |
+| 6.Mahindra SCORPIO-N		  | Deep_Forest 	    | 2179 cc| 14.44 kmpl|    SUV    |  Diesel  | 30000  | 
+| 7.Mahindra THAR		  | Stealth_Black	    | 2184 cc| 15.20 kmpl|    SUV    |  Petrol  | 27500  |
+| 8.TOYOTA URBAN CRUISER HYRYDER  | Sportin_Red		    | 1490 cc| 27.97 kmpl|    SUV    |  Hybrid  | 25000  |
+| 9.Hyundai VENUE		  | Fierry_Red		    | 1493 cc| 22.70 kmpl|    SUV    |  Diesel  | 16000  |
+| 10.SUZUKi Baleno		  | Nexa_Blue 		    | 1197 cc| 30.61 kmpl| Hatchback |   CNG    | 15000  |
+| 11.KIA Seltos			  | Pewter_Olive	    | 1497 cc| 20.70 kmpl|    SUV    |  Diesel  | 21000  |
+| 12.KIA Sonet			  | Intense_Red             | 1493 cc| 22.30 kmpl|    SUV    |  Petrol  | 17500  |
+| 13.TATA ALTROZ		  | Opera_Blue	  	    | 1497 cc| 26.20 kmpl| Hatchback |   CNG    | 15000  | 
+| 14.KIA Carens			  | Imperial_Blue	    | 1497 cc| 21.30 kmpl|    MUV    |  Diesel  | 22000  |
+| 15.MG Hector			  | BlackStorm		    | 1956 cc| 15.58 kmpl|    SUV    |  Petrol  | 25000  |
+| 16.MG Gloster			  | Warm_White		    | 1996 cc| 13.92 kmpl|    SUV    |  Diesel  | 40000  |
+| 17.TOYOTA INNOVA HYCROSS	  | Silver_Metallic 	    | 1987 cc| 21.10 kmpl|    MUV    |  Hybrid  | 30000  |
+| 18.TATA Harrier		  | Oberon_Black  	    | 1956 cc| 16.80 kmpl|    SUV    |  Diesel  | 27000  |
+| 19.Mahindra XUV 300		  | Dark_Grey		    | 1497 cc|  20 kmpl  |    SUV    |  Petrol  | 20000  |
+| 20.Mercedes Benz GLS		  | Selenite_Silver  	    | 2999 cc|  11 kmpl  |    SUV    |  Diesel  | 150000 |
+| 21.Mercedes Benz S Class	  | Graphite_Grey 	    | 2999 cc| 16.05 kmpl|   Coupe   |  Diesel  | 250000 |
+| 22.BMW X7			  | Black_Sapphire	    | 2998 cc| 14.32 kmpl|    SUV    |	Petrol  | 200000 | 
+| 23.Audi Q5			  | Floret_Silver_Metallic  | 1984 cc| 13.47 kmpl|    SUV    |	Petrol  | 125000 |
+| 24.BMW M8 Coupe Competition	  | Black_Sapphire_Metallic | 4395 cc|  8.7 kmpl |   Coupe   |  Petrol  | 350000 |
+| 25.Audi Q7			  | Samurai_Grey_Metallic   | 2995 cc| 11.21 kmpl|    SUV    |  Petrol  | 275000 |
+| 26.BMW XM			  | Marina_Bay_Blue_Metallic| 4395 cc| 61.90 kmpl|    SUV    |  Petrol  | 375000 |
+| 27.Audi RS5			  | Glacier_White Metallic  | 2894 cc| 10.28 kmpl|   Coupe   |  Petrol  | 200000 |
+| 28.Audi RS Q8			  | Orca_Black_Metallic     | 3996 cc|   8 kmpl  |    SUV    |  Petrol  | 300000 | 
+| 29.Mercedes Benz AMG C43	  | Iridium_Silver          | 1991 cc| 14.50 kmpl|   Coupe   |  Petrol  | 225000 | 
+| 30.Mercedes Benz Maybach S-Class| Onyx_Black        	    | 5980 cc|  9.8 kmpl |   Coupe   |  Petrol  | 500000 |
+------------------------------------------------------------------------------------------------------------------
+

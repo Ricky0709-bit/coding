@@ -1,0 +1,104 @@
+body, h1, h2, p, textarea, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(95, 88, 88) ;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0078D7;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#output h2 {
+    font-size: 1.2rem;
+    color: #0078D7;
+    margin-bottom: 10px;
+}
+
+.output-box {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.output-box p {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+#input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#input-area label {
+    font-size: 1rem;
+    color: #555;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: none;
+}
+
+button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0078D7;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005BB5;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}

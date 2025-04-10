@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------------------------------------------------
+|             Bike Name                |         Color         |  Engine  |   Mileage  |    Brakes   |  Price   |
+-----------------------------------------------------------------------------------------------------------------
+|  1.Bajaj Pulsar 125                  |  Black Silver         | 124.4 cc | 51.46 kmpl | Disc        | Rs.5000  |  
+|  2.TVS Raider			       |  Black Panthar	       | 124.8 cc | 71.94 kmpl | Disc        | Rs.5750  |
+|  3.TVS Apache RTR160		       |  Gloss Black          | 159.7 cc | 47 kmpl    | Double disc | Rs.6000  | 
+|  4.Bajaj Pulsar NS200		       |  Metallic Pearl White | 199.5 cc | 40.36 kmpl | Disc	     | Rs.6250	| 							
+|  5.YAMAHA MT 15 V2		       |  Cyan Storm           | 155 cc   | 56.87 kmpl | Double disc | Rs.8500  | 
+|  6.Royal Enfield Hunter 350 	       |  Rebel Blue           | 349.34 cc| 36.20 kmpl | Double disc | Rs.12500 |   
+|  7.YAMAHA R15 V4		       |  Metallic Grey        | 155 cc   | 55.20 kmpl | Double disc | Rs.15000 |
+|  8.Royal Enfield Classic 350	       |  Dark Stealth Black   | 349.35 cc| 41.55 kmpl | Double disc | Rs.20000	|
+|  9.KTM Duke 390		       |  Atlantic Blue        | 398.63 cc| 28.90 kmpl | Double disc | Rs.25000 |
+|  10.Royal Enfield Continental GT650  |  Apex Grey            | 650 cc   | 27 kmpl    | Double disc | Rs.30000 |
+-----------------------------------------------------------------------------------------------------------------	
+

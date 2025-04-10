@@ -1,0 +1,17 @@
+# Set default behavior to auto-convert CRLF line endings
+* text=auto
+
+# Force binary files to not be modified
+*.jpg binary
+*.png binary
+*.webp binary
+*.pdf binary
+*.dat binary
+*.exe binary
+*.dll binary
+*.pyc binary
+
+# Specific file type handling
+*.ipynb text eol=lf
+*.c text eol=lf
+*.py text eol=lf
