@@ -2,7 +2,7 @@
 using namespace std;
 
 struct Node {
-    int key;
+    int data;
     Node* left;
     Node* right;
     int height;
@@ -16,9 +16,9 @@ int getBalance(Node* node) {
     return (node == nullptr) ? 0 : height(node->left) - height(node->right);
 }
 
-Node* createNode(int key) {
+Node* createNode(int data) {
     Node* node = new Node();
-    node->key = key;
+    node->data = data;
     node->left = node->right = nullptr;
     node->height = 1;
     return node;
@@ -44,29 +44,29 @@ Node* rotateLeft(Node* x) {
     return y;
 }
 
-Node* insertNode(Node* node, int key) {
+Node* insertNode(Node* node, int data) {
     if (node == nullptr) 
-        return createNode(key);
+        return createNode(data);
 
-    if (key < node->key)
-        node->left = insertNode(node->left, key);
-    else if (key > node->key)
-        node->right = insertNode(node->right, key);
+    if (data < node->data)
+        node->left = insertNode(node->left, data);
+    else if (data > node->data)
+        node->right = insertNode(node->right, data);
     else
         return node; 
 
     node->height = max(height(node->left), height(node->right)) + 1;
     int balance = getBalance(node);
 
-    if (balance > 1 && key < node->left->key)
+    if (balance > 1 && data < node->left->data)
         return rotateRight(node);
-    if (balance < -1 && key > node->right->key)
+    if (balance < -1 && data > node->right->data)
         return rotateLeft(node);
-    if (balance > 1 && key > node->left->key) {
+    if (balance > 1 && data > node->left->data) {
         node->left = rotateLeft(node->left);
         return rotateRight(node);
     }
-    if (balance < -1 && key < node->right->key) {
+    if (balance < -1 && data < node->right->data) {
         node->right = rotateRight(node->right);
         return rotateLeft(node);
     }
@@ -74,20 +74,20 @@ Node* insertNode(Node* node, int key) {
     return node;
 }
 
-Node* minValueNode(Node* node) {
+Node* mindataNode(Node* node) {
     Node* current = node;
     while (current->left != nullptr)
         current = current->left;
     return current;
 }
 
-Node* deleteNode(Node* root, int key, bool &deleted) {
+Node* deleteNode(Node* root, int data, bool &deleted) {
     if (root == nullptr) return root;
 
-    if (key < root->key)
-        root->left = deleteNode(root->left, key, deleted);
-    else if (key > root->key)
-        root->right = deleteNode(root->right, key, deleted);
+    if (data < root->data)
+        root->left = deleteNode(root->left, data, deleted);
+    else if (data > root->data)
+        root->right = deleteNode(root->right, data, deleted);
     else {
         deleted = true;  
         if ((root->left == nullptr) || (root->right == nullptr)) {
@@ -99,9 +99,9 @@ Node* deleteNode(Node* root, int key, bool &deleted) {
                 *root = *temp;
             delete temp;
         } else {
-            Node* temp = minValueNode(root->right);
-            root->key = temp->key;
-            root->right = deleteNode(root->right, temp->key, deleted);
+            Node* temp = mindataNode(root->right);
+            root->data = temp->data;
+            root->right = deleteNode(root->right, temp->data, deleted);
         }
     }
 
@@ -128,14 +128,14 @@ Node* deleteNode(Node* root, int key, bool &deleted) {
 void inorderTraversal(Node* root) {
     if (root != nullptr) {
         inorderTraversal(root->left);
-        cout << root->key << " ";
+        cout << root->data << " ";
         inorderTraversal(root->right);
     }
 }
 
 int main() {
     Node* root = nullptr;
-    int choice, key;
+    int choice, data;
     bool deleted = false; 
     
     do {
@@ -146,20 +146,20 @@ int main() {
         
         switch (choice) {
             case 1:
-                cout << "Enter key to insert: ";
-                cin >> key;
-                root = insertNode(root, key);
-                cout << "Key " << key << " inserted successfully!\n";
+                cout << "Enter data to insert: ";
+                cin >> data;
+                root = insertNode(root, data);
+                cout << "data " << data << " inserted successfully!\n";
                 break;
             case 2:
-                cout << "Enter key to delete: ";
-                cin >> key;
+                cout << "Enter data to delete: ";
+                cin >> data;
                 deleted = false;
-                root = deleteNode(root, key, deleted);
+                root = deleteNode(root, data, deleted);
                 if (deleted)
-                    cout << "Key " << key << " deleted successfully!\n";
+                    cout << "data " << data << " deleted successfully!\n";
                 else
-                    cout << "Key " << key << " not found!\n";
+                    cout << "data " << data << " not found!\n";
                 break;
             case 3:
                 cout << "In-order Traversal: ";
