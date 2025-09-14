@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-#define N 12
+#define N 10
 
 void printSolution(int board[N][N]) {
     for (int i = 0; i < N; i++) {
